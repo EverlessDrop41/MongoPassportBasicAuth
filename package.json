@@ -1,0 +1,24 @@
+{
+  "name": "mongo-passport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.14.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.0",
+    "cookie-session": "^1.2.0",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.3",
+    "morgan": "^1.6.1",
+    "nunjucks": "^2.2.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
