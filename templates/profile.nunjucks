@@ -10,6 +10,8 @@
         <dl>
         	<dt>Id</dt>
         	<dd class="grey-text">{{user._id}}</dd>
+          <dt>UserName</dt>
+        	<dd class="grey-text">{{user.username}}</dd>
         	<dt>Email</dt>
         	<dd class="grey-text">{{user.email}}</dd>
         </dl>
@@ -17,5 +19,5 @@
     </div>
   </div>
 </div>
-            
+
 {% endblock %}

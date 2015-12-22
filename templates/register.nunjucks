@@ -33,8 +33,14 @@
   <form class="col s12" action="/signup" method="POST">
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="email@example.com" name="email" id="username" type="text" class="validate" required>
-        <label for="username">Email</label>
+        <input placeholder="email@example.com" name="email" id="email" type="email" class="validate" required>
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input name="username" id="username" type="text" class="validate" required>
+        <label for="username">Username</label>
       </div>
     </div>
     <div class="row">
