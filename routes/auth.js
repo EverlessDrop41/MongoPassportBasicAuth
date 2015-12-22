@@ -7,16 +7,30 @@ var sendgrid = require('sendgrid')("SG.H7B05o6JQnqtTkrW7-MBZA.1LxM_ysemup-gOiDOm
 module.exports = function (app, passport, LocalStrategy) {
 
 	app.get('/login', function (req, res) {
-		res.render('login', { message: req.flash('loginMessage') });
+		res.render('login', { message: req.flash('loginMessage'), messages: {
+			success: req.flash("success"),
+			error: req.flash("error"),
+			info: req.flash("info")
+		} });
 	});
 
 	app.get('/register', function (req, res) {
-		res.render('register', { message: req.flash('signupMessage') });
+		res.render('register', { message: req.flash('signupMessage'),
+		messages: {
+			success: req.flash("success"),
+			error: req.flash("error"),
+			info: req.flash("info")
+		} });
 	});
 
 	app.get('/profile', app.locals.isLoggedIn, function (req, res) {
 		res.render('profile', {
-      user : req.user // get the user out of session and pass to template
+      user : req.user, // get the user out of session and pass to template
+			messages: {
+				success: req.flash("success"),
+				error: req.flash("error"),
+				info: req.flash("info")
+			}
     });
 	});
 
@@ -120,7 +134,11 @@ module.exports = function (app, passport, LocalStrategy) {
 	      return res.redirect('/forgot');
 	    }
 	    res.render('reset', {
-	      user: req.user
+	      user: req.user, messages: {
+					success: req.flash("success"),
+					error: req.flash("error"),
+					info: req.flash("info")
+				}
 	    });
 	  });
 	});
