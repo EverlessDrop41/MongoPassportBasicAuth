@@ -3,18 +3,18 @@
 {% block content %}
 
 <div class="row">
-  <h2>Log in</h2>
+  <h2>Reset Password</h2>
 
   <div class="row">
     <div class="col s12">
       <div class="card darken-1">
         <div class="card-content">
-          <span class="card-title">Login</span>
-          <p>This is the login page. Please enter your details</p>
+          <span class="card-title">Password Reset</span>
+          <p>This is the password reset page. Please enter your new password</p>
         </div>
         <div class="card-action">
+          <a href="/login">Log In</a>
           <a href="/register">Sign Up</a>
-          <a href="/forgot">Forgot Password?</a>
           <a href="/">Cancel</a>
         </div>
       </div>
@@ -31,17 +31,17 @@
   </div>
   {% endif %}
 
-  <form class="col s12" action="/login" method="POST">
+  <form class="col s12" method="POST">
     <div class="row">
       <div class="input-field col s12">
-        <input name="username" id="username" type="text" class="validate" required>
-        <label for="username">Username</label>
+        <input name="password" id="password" type="password" class="validate" required>
+        <label for="password">Password</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="password" type="password" name="password" class="validate" required>
-        <label for="password">Password</label>
+        <input id="confirm" type="password" name="confirm" class="validate" required>
+        <label for="confirm">Confirm Password</label>
       </div>
     </div>
     <input class="btn col s12" type="submit">
